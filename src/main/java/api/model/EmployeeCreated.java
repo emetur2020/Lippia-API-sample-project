@@ -2,13 +2,16 @@ package api.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class UserCreated {
+public class EmployeeCreated {
 
     @JsonProperty("name")
     private String name;
 
-    @JsonProperty("job")
-    private String job;
+    @JsonProperty("salary")
+    private String salary;
+
+    @JsonProperty("age")
+    private String age;
 
     @JsonProperty("id")
     private String id;
@@ -21,12 +24,20 @@ public class UserCreated {
         this.name = name;
     }
 
-    public String getJob() {
-        return job;
+    public String getSalary() {
+        return salary;
     }
 
-    public void setJob(String job) {
-        this.job = job;
+    public void setSalary(String salary) {
+        this.salary = salary;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
     }
 
     public String getId() {

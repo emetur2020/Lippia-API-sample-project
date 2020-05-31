@@ -3,31 +3,14 @@ Feature: Api example
 
   @Example
   Scenario Outline: Example scenario for get user data
-    When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
+    Given As an api user for example endpoint
+    When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>'
     Then I will get the proper status code '<statusCode>'
     And The proper 'Id' '<id>' returned in the response
 
     Examples:
-      | jsonName    | statusCode | id | operation | entity |
-      | exampleJson | 200        | 2  | GET       | USER   |
-      | createUser  | 201        |    | POST      | USER   |
-
-  @Example
-  Scenario Outline: Example scenario for error 500
-    When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
-    Then I will get the proper status code '<statusCode>'
-
-    Examples:
-      | jsonName     | statusCode | operation | entity |
-      | errorRequest | 500        | GET       | USER   |
-
-
-  @Example
-  Scenario Outline: Example scenario for input parameters
-    When I perform a '<operation>' to '<entity>' endpoint with the '<jsonRequestName>' and '<inputParameters>'
-    Then I will get the proper status code '<statusCode>'
-    And I will get the proper response in '<jsonResponseName>'
-
-    Examples:
-      | jsonRequestName        | statusCode | operation | entity           | inputParameters         | jsonResponseName        |
-      | responseHeadersRequest | 200        | GET       | RESPONSE_HEADERS | value1:bar1,value2:bar2 | responseHeadersResponse |
+      | jsonName       | statusCode | id | operation | entity |
+      | createEmployee | 200        |    | POST      | USER   |
+      | getEmployee    | 200        |    | GET       | USER   |
+      | putEmployee    | 200        |    | PUT       | USER   |
+      | deleteEmployee | 200        |    | DELETE    | USER   |

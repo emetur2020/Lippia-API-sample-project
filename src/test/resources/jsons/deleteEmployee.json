@@ -1,0 +1,9 @@
+{
+  "url": "http://dummy.restapiexample.com/api/v1/delete/719",
+  "headers": {
+    "Content-Type": "application/json",
+    "status": "success",
+    "message": "successfully! deleted Records"
+  }
+}
+

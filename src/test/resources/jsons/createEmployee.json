@@ -1,0 +1,13 @@
+{
+  "url": "http://dummy.restapiexample.com/api/v1/create",
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "name": "test",
+    "salary": "123",
+    "age": "23",
+    "id": 25
+  }
+}
+
